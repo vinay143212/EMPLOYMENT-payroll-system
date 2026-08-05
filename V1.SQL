@@ -1,0 +1,36 @@
+CREATE DATABASE payroll_id;
+USE payroll_id;
+CREATE table employeee(
+emp_id INT PRIMARY KEY,
+em_name VARCHAR(50),
+department VARCHAR(30),
+designation VARCHAR(30),
+basic_salary DECIMAL(10,2)
+);
+
+CREATE TABLE payroll(
+payroll_id INT PRIMARY KEY,
+emp_id INT,
+month VARCHAR(20),
+basic_salary DECIMAL(10,2),
+hra DECIMAL(10,2),
+da  DECIMAL(10,2),
+pf DECIMAL(10,2),
+tax DECIMAL(10,2),
+net_salary DECIMAL(10,2),
+FOREIGN KEY (emp_id)
+references employeee(emp_id));
+
+INSERT INTO employeee
+VALUES(101,"VINAY","AI&ML",'INTERN',30000),
+(102,"SUDHARSHAN",'HR','MANAGER',50000),
+(103,"RAGHU",'FINANCE','ACCOUNTENT',40000);
+
+INSERT INTO payroll
+VALUES(1,101,'AUGEST',30000,6000,3000,1800,1200,36000),
+(2,102,'AUGEST',50000,10000,5000,3000,2500,59000),
+(3,103,'AUGEST',40000,8000,4000,2400,1800,47800);
+
+
+SELECT * FROM payroll
+ 
