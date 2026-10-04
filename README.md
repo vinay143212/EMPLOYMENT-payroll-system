@@ -21,7 +21,7 @@ The Employee Payroll Management System is a MySQL database project designed to m
 📂 Database Tables
 
 - Employee
-- Department
+- Department  
 - Attendance
 - Payroll
 
