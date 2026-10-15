@@ -1,5 +1,5 @@
 Employee Payroll Management System
-
+  
 📌 Project Overview
 
 The Employee Payroll Management System is a MySQL database project designed to manage employee payroll information efficiently. It stores employee details, department information, attendance, and salary records using relational database tables.
